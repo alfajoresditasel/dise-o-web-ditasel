@@ -808,3 +808,203 @@ footer{
         opacity:0;
     }
 }
+
+
+/* ================================= */
+/* RESPONSIVE TABLET */
+/* ================================= */
+
+@media (max-width: 1024px){
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .productos-grid{
+        flex-wrap:wrap;
+    }
+
+    .video-frame{
+        width:100%;
+        height:400px;
+    }
+
+    .mision-vision,
+    .sobre-nosotros{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .mv-imagen img,
+    .sn-imagen img{
+        max-width:350px;
+    }
+
+}
+
+/* ================================= */
+/* RESPONSIVE CELULAR */
+/* ================================= */
+
+@media (max-width: 768px){
+
+    /* NAVBAR */
+    .navbar{
+        height:auto;
+        padding:15px 5%;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .logo img{
+        width:70px;
+    }
+
+    /* HERO */
+    .hero-content{
+        width:90%;
+    }
+
+    .hero-content h1{
+        font-size:2.2rem;
+    }
+
+    .btn{
+        padding:12px 25px;
+        font-size:0.9rem;
+    }
+
+    .prev,
+    .next{
+        width:45px;
+        height:45px;
+        font-size:1.5rem;
+    }
+
+    /* PRODUCTOS */
+    .productos h2,
+    .videos-section h2,
+    .clientes h2,
+    .sn-texto h2,
+    .mv-box h2{
+        font-size:2rem;
+    }
+
+    .productos-grid{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .producto{
+        width:90%;
+        max-width:350px;
+    }
+
+    /* VIDEOS */
+    .video-frame{
+        width:100%;
+        height:250px;
+    }
+
+    /* CLIENTES */
+    .clientes-slider{
+        height:300px;
+    }
+
+    .clientes-prev,
+    .clientes-next{
+        width:50px;
+        height:50px;
+        font-size:25px;
+    }
+
+    /* REDES */
+    .social-icons{
+        gap:25px;
+        flex-wrap:wrap;
+    }
+
+    .social-icons i{
+        font-size:3rem;
+    }
+
+    /* FOOTER */
+    .footer-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    /* AUDIO */
+    .audio-controls{
+        top:auto;
+        bottom:20px;
+        left:15px;
+    }
+
+    /* CARRITO */
+    .cart-panel{
+        width:100%;
+    }
+
+    /* MISION / VISION */
+    .mision-vision,
+    .sobre-nosotros{
+        flex-direction:column;
+        text-align:center;
+        gap:40px;
+    }
+
+    .mv-texto,
+    .sn-texto{
+        width:100%;
+    }
+
+    .mv-imagen img,
+    .sn-imagen img{
+        width:80%;
+    }
+
+}
+
+/* ================================= */
+/* CELULARES PEQUEÑOS */
+/* ================================= */
+
+@media (max-width: 480px){
+
+    .hero-content h1{
+        font-size:1.8rem;
+    }
+
+    .productos h2,
+    .videos-section h2,
+    .clientes h2{
+        font-size:1.7rem;
+    }
+
+    .producto{
+        width:95%;
+    }
+
+    .video-frame{
+        height:220px;
+    }
+
+    .clientes-slider{
+        height:250px;
+    }
+
+    .btn,
+    .checkout,
+    .whatsapp-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
