@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alfajores Ditasel</title>
+<link rel="icon" type="image/png" href="logo.png">
+
+<link rel="stylesheet" href="version6.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- AUDIO CONTROLES -->
+<div class="audio-controls">
+<!--
+    <button id="muteBtn">
+        <i class="fa-solid fa-volume-high"></i>
+    </button>
+-->
+    <button id="musicBtn">
+        <i class="fa-solid fa-music"></i>
+    </button>
+
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        <img src="logo.png">
+    </div>
+
+    <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#redes">Redes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <div class="cart-btn" onclick="toggleCart()">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count">0</span>
+    </div>
+
+</nav>
+
+<!-- CARRITO -->
+<div class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+        <h2>Tu carrito</h2>
+
+        <!-- BOTÓN CERRAR BONITO -->
+        <button class="close-cart" onclick="toggleCart()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+        <h3 id="total">Total: $0</h3>
+        <button class="checkout">Finalizar pedido</button>
+    </div>
+
+</div>
+
+<!-- SLIDER HERO -->
+<section class="slider" id="inicio">
+
+    <div class="slides">
+        <div class="slide active"><img src="banner1.png"></div>
+        <div class="slide"><img src="banner2.png"></div>
+        <div class="slide"><img src="banner3.png"></div>
+        <div class="slide"><img src="banner4.png"></div>
+        <div class="slide"><img src="banner5.png"></div>
+         <div class="slide"><img src="banner6.png"></div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>Endulzamos tus momentos</h1>
+        <a href="#productos" class="btn">Ver productos</a>
+    </div>
+
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <button class="next" onclick="nextSlide()">❯</button>
+
+</section>
+
+<!-- PRODUCTOS -->
+<section class="productos" id="productos">
+
+    <h2>Nuestros Productos</h2>
+
+    <div class="productos-grid" id="productos-grid"></div>
+
+    <button class="prod-prev" onclick="prevProducts()">❮</button>
+    <button class="prod-next" onclick="nextProducts()">❯</button>
+
+</section>
+
+<!-- ========================= -->
+<!-- VIDEOS (MARCO CARRUSEL) -->
+<!-- ========================= -->
+<section class="videos-section" id="videos">
+
+    <h2>Videos</h2>
+
+    <div class="video-layout">
+
+        <!-- MARCO DE VIDEO -->
+        <div class="video-frame">
+
+            <video class="video-slide active" muted>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+
+            <video class="video-slide" muted>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+
+            <video class="video-slide" muted>
+                <source src="video3.mp4" type="video/mp4">
+            </video>
+
+            <!-- FLECHAS -->
+            <button class="video-prev" onclick="prevVideo()">❮</button>
+            <button class="video-next" onclick="nextVideo()">❯</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CLIENTES -->
+<section class="clientes" id="clientes">
+
+    <h2>Algunas de nuestras entregas</h2>
+
+    <div class="clientes-slider">
+
+        <div class="cliente-slide active">
+            <img src="cliente1.png">
+        </div>
+
+        <div class="cliente-slide">
+            <img src="cliente2.png">
+        </div>
+
+        <div class="cliente-slide">
+            <img src="cliente3.png">
+        </div>
+
+        <div class="cliente-slide">
+            <img src="cliente4.jpg">
+        </div>
+        <div class="cliente-slide">
+            <img src="cliente5.jpeg">
+        </div>
+        <div class="cliente-slide">
+            <img src="cliente6.png">
+        </div>
+        <div class="cliente-slide">
+            <img src="cliente7.jpg">
+        </div>
+
+        <button class="clientes-prev" onclick="prevClienteSlide()">❮</button>
+        <button class="clientes-next" onclick="nextClienteSlide()">❯</button>
+
+    </div>
+
+</section>
+
+<!-- REDES -->
+<section class="redes" id="redes">
+
+    <h2>Redes Sociales</h2>
+
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61574256030995" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/alfajores_ditasel/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@galletasymas_ditasel?lang=es-419" target="_blank"><i class="fab fa-tiktok"></i></a>
+       <!-- <a href="https://wa.me/573226005803" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    -->
+    </div>
+
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+
+    <h2>Contáctanos</h2>
+
+    <a class="whatsapp-btn" href="https://wa.me/573226005803" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        Escríbenos por WhatsApp
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            <h3>Métodos de pago</h3>
+            <div class="payments">
+                <img src="nequi.png">
+                <img src="bancolombia.png">
+            </div>
+        </div>
+
+        <div>
+            <h3>Contacto</h3>
+            <p>📱 322 600 5803</p>
+            <p>📧 alfajoresditasel@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Alfajores Digitales
+    </div>
+
+</footer>
+
+<!-- AUDIO -->
+<audio id="bg-music" loop>
+    <source src="audio.mp3" type="audio/mpeg">
+</audio>
+
+<script src="version6.js"></script>
+
+</body>
+</html>
