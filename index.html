@@ -30,6 +30,37 @@ rel="stylesheet">
 </head>
 
 <body>
+<!-- POPUP AVISO -->
+<div class="popup-overlay" id="popupAviso">
+
+    <div class="popup-box">
+
+        <h2>⚠ Aviso importante</h2>
+
+        <p>
+            Actualmente la sección de carrito no se encuentra disponible.
+            <br><br>
+            Puedes realizar tus pedidos directamente a través de nuestras redes sociales
+            o por WhatsApp.
+        </p>
+
+        <a 
+            href="https://wa.me/573226005803" 
+            target="_blank"
+            class="popup-btn"
+        >
+            Ir a WhatsApp
+        </a>
+
+        <button onclick="cerrarPopup()" class="cerrar-popup">
+            Continuar en la página
+        </button>
+
+    </div>
+
+</div>
+
+
 
     <div class="bg-bubbles">
     <span></span>
@@ -137,11 +168,10 @@ rel="stylesheet">
 <section class="videos-section" id="videos">
 
     <h2>Videos</h2>
-
     <div class="video-layout">
 
         <div class="video-frame">
-
+           <!---
             <video class="video-slide active" muted>
                 <source src="videos/video1.mp4" type="video/mp4">
             </video>
@@ -156,11 +186,23 @@ rel="stylesheet">
 
             <button class="video-prev" onclick="prevVideo()">❮</button>
             <button class="video-next" onclick="nextVideo()">❯</button>
+        -->
+            <!---
+            <video class="video-slide active" muted autoplay playsinline controls>
+             <source src="videos/video1.mp4" type="video/mp4">
+            </video>
 
+            <video class="video-slide" muted autoplay playsinline controls>
+            <source src="videos/video2.mp4" type="video/mp4">
+            </video>
+
+            <video class="video-slide" muted autoplay playsinline controls>
+            <source src="videos/video3.mp4" type="video/mp4">
+            </video>
+        -->
         </div>
 
     </div>
-
 </section>
 
 <!-- CLIENTES -->

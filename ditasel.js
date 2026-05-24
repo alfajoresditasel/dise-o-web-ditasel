@@ -266,3 +266,7 @@ if(musicBtn){
 // inicializar productos al final (seguro)
 renderProducts();
 setInterval(nextProducts, 5000);
+
+function cerrarPopup(){
+    document.getElementById("popupAviso").style.display = "none";
+}
